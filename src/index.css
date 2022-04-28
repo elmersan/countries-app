@@ -9,6 +9,10 @@
   margin: auto;
 }
 
+.card-country{
+  min-width: 150px;
+}
+
 @layer components{
   html{
     @apply font-sans text-Very_Dark_Blue bg-Very_Light_Gray

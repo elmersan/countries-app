@@ -1,9 +1,10 @@
 import React from 'react'
+import { Country } from './Country'
 
 export const Countries = () => {
   return (
-    <>
-      <h1 className=''>Hola componente</h1>
-    </>
+    <div className='py-8 flex justify-center items-center'>
+      <Country/>
+    </div>
   )
 }

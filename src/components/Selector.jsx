@@ -35,8 +35,8 @@ export const Selector = () => {
   }
 
   return (
-    <div className='mt-8 rounded-md w-3/5 relative'>
-      <div onClick={handleClickSelector} className='cursor-pointer bg-White flex justify-between py-[14px] items-center px-8 pr-4 shadow-md'>
+    <div className='mt-11 w-3/5 relative'>
+      <div onClick={handleClickSelector} className='rounded-md cursor-pointer bg-White flex justify-between py-[14px] items-center px-8 pr-4 shadow-md'>
         <p ref={ref} className='text-sm font-semibold'>Filter by Region</p>
         <ion-icon name="chevron-down-outline"></ion-icon>
       </div>
