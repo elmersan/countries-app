@@ -2,8 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+.wrapper {
+  max-inline-size: 115.8rem;
+  padding-inline-end: 1rem;
+  padding-inline-start: 1rem;
+  margin: auto;
+}
+
 @layer components{
   html{
-    @apply font-sans
+    @apply font-sans text-Very_Dark_Blue bg-Very_Light_Gray
   }
 }
