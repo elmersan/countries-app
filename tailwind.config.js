@@ -7,11 +7,21 @@ module.exports = {
   darkMode: 'media', // or 'class'
   theme: {
     screens: {
-      sm: '640px',
+      sm: '375px',
       md: '768px',
       lg: '1024px',
-      xl: '1280px',
+      xl: '1440px',
       '2xl': '1536px',
+    },
+    extend:{
+      colors: {
+        Dark_Blue: 'hsl(209, 23%, 22%)',
+        Very_Dark_Blue: 'hsl(207, 26%, 17%)',
+        Very_Dark_Blue: 'hsl(200, 15%, 8%)',
+        Dark_Gray: 'hsl(0, 0%, 52%)',
+        Very_Light_Gray: 'hsl(0, 0%, 98%)',
+        White: 'hsl(0, 0%, 100%)'
+      }
     },
     colors: ({ colors }) => ({
       inherit: colors.inherit,
@@ -352,6 +362,7 @@ module.exports = {
     },
     fontFamily: {
       sans: [
+        'Nunito Sans',
         'ui-sans-serif',
         'system-ui',
         '-apple-system',
