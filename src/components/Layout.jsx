@@ -5,7 +5,7 @@ export const Layout = ({children}) => {
   return (
     <>
       <Header/>
-      <main>
+      <main className='wrapper pt-6'>
         {
           children
         }
