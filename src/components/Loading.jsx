@@ -3,7 +3,7 @@ import React from "react";
 export const Loading = () => {
   return (
     <div
-      className=" inline-flex items-center px-4 py-2 font-semibold leading-6 text-sm rounded-md text-Dark_Blue"
+      className="inline-flex items-center px-4 py-2 font-semibold leading-6 text-sm rounded-md text-Dark_Blue"
     >
       <svg
         className="motion-reduce:hidden animate-spin -ml-1 mr-3 h-5 w-5 text-Dark_Blue"

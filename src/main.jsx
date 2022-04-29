@@ -1,9 +1,9 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
-import { AppRouter } from "./routes/AppRouter";
+import { App } from "./App";
 import "./index.css";
 
 const divRoot = document.querySelector("#root");
 const root = createRoot(divRoot);
 
-root.render(<AppRouter/>);
+root.render(<App/>);

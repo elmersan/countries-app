@@ -1,5 +1,5 @@
 import React from "react";
-import { useFetch } from "../hooks/useFetch";
+import { getCountriesByCodes } from "../helpers/getCountriesByCodes";
 import { Loading } from "./Loading";
 
 export const CountryDetails = ({
@@ -20,12 +20,7 @@ export const CountryDetails = ({
   const { common } = Object.values(nativeName).pop();
   const bord = borders ? borders : [];
 
-  const { data, loading, error } =
-    bord.length > 0
-      ? useFetch(
-          `https://restcountries.com/v3.1/alpha?codes=${bord.toString()}`
-        )
-      : { data: null, loading: false, error: 'error' };
+  const { data, loading, error } = getCountriesByCodes(bord);
 
   return (
     <div className="px-4 mt-16 overflow-hidden card-country">

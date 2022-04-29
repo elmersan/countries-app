@@ -1,12 +1,22 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
+import { UserContext } from "../context/UserContext";
+import { getCountryByName } from "../helpers/getCountryByName";
 import { useForm } from "../hooks/useForm";
 
 export const Search = () => {
-
   const [formValues, handleInputChange, reset] = useForm({
-    country: ""
+    country: "",
   });
-  const {country} = formValues
+  const { country } = formValues;
+
+  const { setCountries } = useContext(UserContext);
+  const data = getCountryByName(country ? country : "peru");
+
+  useEffect(() => {
+    if (country !== "") {
+      setCountries({ ...data });
+    }
+  }, [setCountries, data]);
 
   return (
     <div
