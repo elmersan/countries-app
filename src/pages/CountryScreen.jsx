@@ -17,7 +17,7 @@ export const CountryScreen = () => {
 
   return (
     <>
-      <button type="button" onClick={handleNavigate} className="ml-4 bg-White mt-4 shadow-md rounded-md py-2 px-8 flex items-center justify-center gap-2 font-semibold">
+      <button type="button" onClick={handleNavigate} className="ml-4 bg-White dark:bg-Dark_Blue_dark_elements text-Very_Dark_Blue_Light_Mode_Text dark:text-White mt-4 shadow-md rounded-md py-2 px-8 flex items-center justify-center gap-2 font-semibold">
         <ion-icon name="arrow-back-outline"></ion-icon>
         Back
       </button>

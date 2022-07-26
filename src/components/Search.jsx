@@ -12,6 +12,8 @@ export const Search = () => {
   const { setCountries } = useContext(UserContext);
   const data = getCountryByName(country ? country : "peru");
 
+  if(!data) return
+
   useEffect(() => {
     if (country !== "") {
       setCountries({ ...data });
@@ -20,13 +22,15 @@ export const Search = () => {
 
   return (
     <div
-      className="bg-White shadow-md px-8 rounded-md flex items-center gap-7 md:w-[450px]"
+      className="bg-White dark:bg-Dark_Blue_dark_elements shadow-md px-8 rounded-md flex items-center gap-7 md:w-[450px]"
       id="search"
     >
-      <ion-icon name="search-outline"></ion-icon>
+      <span className="inline-flex">
+        <ion-icon name="search-outline"></ion-icon>
+      </span>
       <input
         type="text"
-        className="py-[14px] w-full outline-none text-sm"
+        className="py-[18px] w-full outline-none text-sm bg-White dark:bg-Dark_Blue_dark_elements text-Very_Dark_Blue_Light_Mode_Text dark:text-White"
         placeholder="Search for a country..."
         name="country"
         value={country}

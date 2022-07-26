@@ -34,7 +34,7 @@ export const Countries = () => {
             )
           )
         ):(
-          <span>Country not found</span>
+          <span className="text-Very_Dark_Blue_Light_Mode_Text dark:text-White">Country not found</span>
         )
       )}
     </div>

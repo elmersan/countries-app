@@ -46,15 +46,16 @@
 
 @layer components{
   html{
-    @apply font-sans text-Very_Dark_Blue bg-Very_Light_Gray
+    @apply font-sans text-Very_Dark_Blue_Light_Mode_Text bg-Very_Light_Gray dark:bg-Very_Dark_Blue_bg_dark
   }
+  
 
   #search ion-icon{
     font-size: 24px;
-    @apply text-Dark_Gray
+    @apply text-Dark_Gray_Light_inputs dark:text-White
   }
   
   ::placeholder{
-    @apply text-Dark_Gray
+    @apply text-Dark_Gray_Light_inputs dark:text-White
   }
 }

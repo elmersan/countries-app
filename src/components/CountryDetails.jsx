@@ -24,7 +24,7 @@ export const CountryDetails = ({
   const numberPopulation = new Intl.NumberFormat("es-MX").format(population);
 
   return (
-    <div className="px-4 mt-16 pb-8 overflow-hidden card-country flex md:items-center flex-col md:flex-row gap-8 md:justify-between md:gap-28">
+    <div className="px-4 mt-16 pb-8 overflow-hidden card-country flex md:items-center flex-col md:flex-row gap-8 md:justify-between md:gap-28 text-Very_Dark_Blue_Light_Mode_Text dark:text-White">
       <div className="flex-1">
         <img src={flag} alt={name} className="object-cover" />
       </div>
@@ -33,30 +33,38 @@ export const CountryDetails = ({
         <div className="flex flex-col gap-10 md:flex-row">
           <div className="flex gap-3 flex-col">
             <p className="text-sm">
-              <span className="font-bold">Native Name: </span> {common}
+              <b>Native Name: </b>
+              <span className="font-light">{common}</span>
             </p>
             <p className="text-sm">
-              <span className="font-bold">Population: </span> {numberPopulation}
+              <b>Population: </b>
+              <span className="font-light">{numberPopulation}</span>
             </p>
             <p className="text-sm">
-              <span className="font-bold">Region: </span> {region}
+              <b>Region: </b>
+              <span className="font-light">{region}</span> 
             </p>
             <p className="text-sm">
-              <span className="font-bold">Sub Region: </span> {subregion}
+              <b>Sub Region: </b>
+              <span className="font-light">{subregion}</span> 
             </p>
             <p className="text-sm">
-              <span className="font-bold">Capital: </span> {capital}
+              <b>Capital: </b>
+              <span className="font-light">{capital}</span> 
             </p>
           </div>
           <div className="flex gap-3 flex-col">
             <p className="text-sm">
-              <span className="font-bold">Top Level Domain: </span> {tld}
+              <b>Top Level Domain: </b>
+              <span className="font-light">{tld}</span>
             </p>
             <p className="text-sm">
-              <span className="font-bold">Currencies: </span> {curr[0].name}
+              <b>Currencies: </b>
+              <span className="font-light">{curr[0].name}</span>
             </p>
             <p className="text-sm">
-              <span className="font-bold">Languages: </span> {lang.toString()}
+              <b>Languages: </b>
+              <span className="font-light">{lang.toString()}</span>
             </p>
           </div>
         </div>
@@ -70,7 +78,7 @@ export const CountryDetails = ({
               data.map(({ name: { common } }) => (
                 <span
                   key={common}
-                  className="bg-White text-center shadow-md rounded-md px-6 py-1"
+                  className="bg-White font-light dark:bg-Dark_Blue_dark_elements text-Very_Dark_Blue_Light_Mode_Text dark:text-White text-center shadow-md rounded-md px-6 py-1"
                 >
                   {common}
                 </span>

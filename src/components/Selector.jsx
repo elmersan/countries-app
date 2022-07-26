@@ -49,7 +49,7 @@ export const Selector = () => {
     <div className="md:mt-0 mt-11 w-3/5 md:w-auto relative">
       <div
         onClick={handleClickSelector}
-        className="md:gap-8 rounded-md cursor-pointer bg-White flex justify-between py-[14px] items-center px-8 pr-4 shadow-md"
+        className="md:gap-8 rounded-md cursor-pointer bg-White dark:bg-Dark_Blue_dark_elements flex justify-between py-[18px] items-center px-8 pr-4 shadow-md text-Very_Dark_Blue_Light_Mode_Text dark:text-White"
       >
         <p ref={ref} className="text-sm font-semibold">
           Filter by Region
@@ -60,12 +60,12 @@ export const Selector = () => {
       </div>
 
       {hide && (
-        <ul className="bg-White mt-1 rounded-md shadow-md text-sm font-semibold absolute left-0 right-0 top-12 py-4">
+        <ul className="bg-White dark:bg-Dark_Blue_dark_elements text-Very_Dark_Blue_Light_Mode_Text dark:text-White mt-1 rounded-md shadow-md text-sm font-semibold absolute left-0 right-0 top-12 py-4">
           {regions.map(({ name }) => (
             <li
               key={name}
               onClick={handleClick}
-              className="cursor-pointer px-8 py-[5px] hover:bg-Very_Light_Gray"
+              className="cursor-pointer px-8 py-[5px] hover:bg-Very_Light_Gray dark:hover:bg-Very_Dark_Blue_bg_dark"
             >
               <p>{name}</p>
             </li>
