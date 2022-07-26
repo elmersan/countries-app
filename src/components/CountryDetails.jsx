@@ -21,21 +21,22 @@ export const CountryDetails = ({
   const bord = borders ? borders : [];
 
   const { data, loading, error } = getCountriesByCodes(bord);
+  const numberPopulation = new Intl.NumberFormat("es-MX").format(population);
 
   return (
-    <div className="px-4 mt-16 overflow-hidden card-country">
-      <div className="h-56 overflow-hidden">
-        <img src={flag} alt={name} className="w-full" />
+    <div className="px-4 mt-16 pb-8 overflow-hidden card-country flex md:items-center flex-col md:flex-row gap-8 md:justify-between md:gap-28">
+      <div className="flex-1">
+        <img src={flag} alt={name} className="object-cover" />
       </div>
-      <div className="pb-9 font-semibold">
+      <div className="pb-9 font-semibold md:flex-[1.3]">
         <h3 className="font-extrabold py-[35px] text-lg">{name}</h3>
-        <div className="flex flex-col gap-10">
+        <div className="flex flex-col gap-10 md:flex-row">
           <div className="flex gap-3 flex-col">
             <p className="text-sm">
               <span className="font-bold">Native Name: </span> {common}
             </p>
             <p className="text-sm">
-              <span className="font-bold">Population: </span> {population}
+              <span className="font-bold">Population: </span> {numberPopulation}
             </p>
             <p className="text-sm">
               <span className="font-bold">Region: </span> {region}
@@ -58,23 +59,26 @@ export const CountryDetails = ({
               <span className="font-bold">Languages: </span> {lang.toString()}
             </p>
           </div>
-          <div>
-            <h3 className="font-bold mb-5">Border Countries</h3>
-            <div className="grilla">
-              {loading ? (
-                <Loading />
-              ) : (
-                !error &&
-                data.map(({ name: { common } }) => (
-                  <span
-                    key={common}
-                    className="bg-White text-center shadow-md rounded-md px-6 py-1"
-                  >
-                    {common}
-                  </span>
-                ))
-              )}
-            </div>
+        </div>
+        <div className="mt-8 flex flex-col md:flex-row w-full gap-2">
+          <h3 className="font-bold mb-5 md:mt-[5px]">Border Countries: </h3>
+          <div className="grilla flex-1">
+            {loading ? (
+              <Loading />
+            ) : (
+              !error ?(
+              data.map(({ name: { common } }) => (
+                <span
+                  key={common}
+                  className="bg-White text-center shadow-md rounded-md px-6 py-1"
+                >
+                  {common}
+                </span>
+              ))
+              ):(
+                <span>No neighboring countries</span>
+              )
+            )}
           </div>
         </div>
       </div>

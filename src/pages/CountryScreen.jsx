@@ -17,19 +17,18 @@ export const CountryScreen = () => {
 
   return (
     <>
-      <button onClick={handleNavigate} className="ml-4 bg-White mt-4 shadow-md rounded-md py-2 px-8 flex items-center justify-center gap-2 font-semibold">
+      <button type="button" onClick={handleNavigate} className="ml-4 bg-White mt-4 shadow-md rounded-md py-2 px-8 flex items-center justify-center gap-2 font-semibold">
         <ion-icon name="arrow-back-outline"></ion-icon>
         Back
       </button>
 
-      <div className="flex justify-center items-center">  
         {loading ? (
           <Loading />
         ) : (
           !error && data.map(
             ({
               borders,
-              flags: { png },
+              flags: { svg },
               name: { common,nativeName },
               population,
               region,
@@ -42,7 +41,7 @@ export const CountryScreen = () => {
               <CountryDetails
                 key={common}
                 borders={borders}
-                flag={png}
+                flag={svg}
                 name={common}
                 nativeName={nativeName}
                 population={population}
@@ -56,7 +55,6 @@ export const CountryScreen = () => {
             )
           )
         )}
-      </div>
     </>
   );
 };

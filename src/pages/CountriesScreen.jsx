@@ -6,7 +6,7 @@ import { Selector } from '../components/Selector'
 export const CountriesScreen = () => {
   return (
     <>
-      <div>
+      <div className='md:flex justify-between items-center gap-16'>
         <Search/>
         <Selector/>
       </div>

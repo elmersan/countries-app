@@ -20,7 +20,7 @@ export const Search = () => {
 
   return (
     <div
-      className="bg-White shadow-md px-8 rounded-md flex items-center gap-7"
+      className="bg-White shadow-md px-8 rounded-md flex items-center gap-7 md:w-[450px]"
       id="search"
     >
       <ion-icon name="search-outline"></ion-icon>

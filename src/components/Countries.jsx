@@ -10,14 +10,14 @@ export const Countries = () => {
   const {data,loading,error} = countries 
   
   return (
-    <div className="py-8 flex justify-center items-center flex-col gap-10">
+    <div className="grilla-countries md:gap-16">
       {loading ? (
           <Loading />
         ) : (
         !error ? (
           data.map(
             ({
-              flags: { png },
+              flags: { svg },
               name: { common },
               population,
               region,
@@ -25,7 +25,7 @@ export const Countries = () => {
             }) => (
               <Country
                 key={common}
-                flag={png}
+                flag={svg}
                 name={common}
                 population={population}
                 region={region}

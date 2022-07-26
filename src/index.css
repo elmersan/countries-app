@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .wrapper {
-  max-inline-size: 115.8rem;
+  max-inline-size: 1440px;
   padding-inline-end: 1rem;
   padding-inline-start: 1rem;
   margin: auto;
@@ -17,10 +17,31 @@
   display: grid;
   grid-template-columns: repeat(
     auto-fit,
-    minmax(150px,1fr)
+    minmax(180px,1fr)
   );
   gap: 10px;
   align-items: center;
+}
+
+.grilla-countries {
+  padding-block: 3rem;
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(230px,1fr)
+  );
+  gap: 4rem;
+  align-content: center;
+  justify-items: center;
+}
+
+.icon-selector {
+  transition: all 0.3s ease-in-out;
+}
+
+.icon-selector.up {
+  transform: rotate(180deg);
+  transition: all 0.3s ease-in-out;
 }
 
 @layer components{
